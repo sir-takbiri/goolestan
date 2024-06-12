@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "font";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../font/Iran\ Sans\ Light.ttf) format("woff2");
+  }
+}
+@layer components {
+  /***********HEADER************/
+  nav > a {
+    @apply text-[14px] py-3 px-7 md:px-4 lg:text-[16px] lg:border-l-[1px] lg:py-1 border-[#4d4d52];
+  }
+  nav > a:hover {
+    @apply opacity-90;
+  }
+  nav > a:last-child {
+    @apply border-0;
+  }
+}
+#menuNav:checked + nav {
+  height: 410px;
+}
